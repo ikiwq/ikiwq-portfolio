@@ -7,7 +7,7 @@ import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader"
 import {OrbitControls} from '@react-three/drei'
 
 const Scene = () => {
-    const gltf = useLoader(GLTFLoader, './models/scene.gltf');
+    const gltf = useLoader(GLTFLoader, './src/models/scene.gltf');
     return(
         <Suspense fallback={<h1 className='text-white text-4xl'>Loading!</h1>}>
           <primitive object={gltf.scene}/>
