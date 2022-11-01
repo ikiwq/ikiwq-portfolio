@@ -9,7 +9,7 @@ const Contact = ({nightMode}) => {
             <div className='w-full grid grid-cols-1 xl:grid-cols-2 space-x-0 space-y-4 xl:space-x-4 xl:space-y-0'>
               <div className=' col-span-1 flex justify-center items-center'>
                 <span className={`${ nightMode ? "text-white" : "text-black"} text-3xl`}>As a developer, I am seeking new opportunities everyday. I am willing learn new things and give my contribute
-                to interesting and innovatives works.</span>
+                to interesting and innovative works.</span>
               </div>
               <div className='col-span-1 text-red-600 text-6xl flex xl:flex-col justify-around items-start h-full'>
                 <a className="flex items-center justify-center text-4xl hover:scale-110 transition-all duration-300" href="https://github.com/ikiwq" rel='noreferrer noopener' target="_blank"><AiFillGithub className="text-6xl"/><p className='hidden xl:flex'>Ikiwq</p></a>
