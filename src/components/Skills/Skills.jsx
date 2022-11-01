@@ -11,7 +11,7 @@ import nodejs from '../../assets/icons/nodejs.png'
 import nextjs from '../../assets/icons/nextjs.png'
 import cpp from '../../assets/icons/cpp.png'
 import python from '../../assets/icons/python.png'
-import java from '../../assets/icons/java.png'
+import java from '../../assets/icons/Java.png'
 
 const Skills = ({nightMode}) => {
     const divRef = useRef(null);

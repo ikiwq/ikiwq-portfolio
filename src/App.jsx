@@ -7,15 +7,7 @@ import Skills from './components/Skills/Skills';
 import Contact from './components/Contact/Contact'
 
 const App = () => {
-  const [nightMode, setNightMode] = useState(false);
-
-  useEffect(()=>{
-    if(window.matchMedia('(prefers-color-scheme: dark)').matches){
-      setNightMode(true);
-    }else{
-      setNightMode(false);
-    };
-    },[])
+  const [nightMode, setNightMode] = useState(true);
 
   return (
     <div className={`transition-all duration-500 ${nightMode ? "bg-black" : "bg-white"} overflow-x-hidden`}>
