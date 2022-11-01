@@ -4,12 +4,12 @@ import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import * as THREE from 'three'
 
 import {GLTFLoader} from "three/examples/jsm/loaders/GLTFLoader"
-import {OrbitControls} from '@react-three/drei'
+import {Html, OrbitControls} from '@react-three/drei'
 
 const Scene = () => {
     const gltf = useLoader(GLTFLoader, './scene.gltf');
     return(
-        <Suspense fallback={<div>Loading!</div>}>
+        <Suspense fallback={<Html>Loading...</Html>}>
           <primitive object={gltf.scene}/>
         </Suspense>
     )
