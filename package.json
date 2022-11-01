@@ -19,7 +19,6 @@
     "react-icons": "^4.6.0",
     "react-scroll": "^1.8.8",
     "sass": "^1.55.0",
-    "scrambling-letters": "^1.6.2",
     "three": "^0.146.0",
     "use-asset": "^1.0.4"
   },

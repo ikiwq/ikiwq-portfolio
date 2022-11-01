@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react'
 import { Link } from 'react-scroll';
 import { AiFillGithub, AiFillTwitterCircle, AiFillYoutube } from 'react-icons/ai'
-import {IoIosArrowRoundBack, IoIosArrowRoundForward, IoMdPaperPlane} from 'react-icons/io'
-import { BsMouse2, BsTwitch } from 'react-icons/bs'
+import {IoMdPaperPlane} from 'react-icons/io'
+import { BsMouse2, BsTwitch, BsHandIndexThumb } from 'react-icons/bs'
 import ThreeJS from '../ThreeJSScene/ThreeJS'
 import './Styles.scss'
 
@@ -85,7 +85,7 @@ const Home = ({nightMode}) => {
             </div>
             <div className='h-full flex items-center justify-center col-span-1'>
               <div className='h-96 w-full'>
-                <span className={`flex items-center justify-center ${nightMode ? "text-white" : "text-black"} text-center text-xl gap-2 move-div`}><IoIosArrowRoundBack/> Move me around!<IoIosArrowRoundForward/></span>
+                <span className={`flex items-center justify-center ${nightMode ? "text-white" : "text-black"} text-center text-xl gap-2 move-div md:hidden`}><BsHandIndexThumb/> Scroll down! </span>
                 <ThreeJS nightMode={nightMode}/>
               </div>
             </div>

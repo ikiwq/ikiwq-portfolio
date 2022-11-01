@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react'
 import { BiRightArrow } from 'react-icons/bi'
-import Scrambler from "scrambling-letters"
 import html from '../../assets/icons/html.png'
 import css from '../../assets/icons/css.png'
 import javascript from '../../assets/icons/javascript.png'
@@ -14,19 +13,7 @@ import python from '../../assets/icons/python.png'
 import java from '../../assets/icons/Java.png'
 
 const Skills = ({nightMode}) => {
-    const divRef = useRef(null);
-    useEffect(()=>{
-        let divRef = document.querySelector(".divRef");
-        const observer = new IntersectionObserver(()=>{
-                Scrambler({target: "#skill-text",
-                random: [500, 1000],
-                speed: 50,});
-        });
-        observer.threshold = [0.00, 0.01];
-        observer.observe(divRef); 
-    },[]);
 
-    
   return (
     <div name="skills" className={`w-full md:h-screen flex justify-center items-center transition-all duration-500 ${nightMode ? "bg-black" : "bg-white"}`}>
         <div className='container mx-auto max-w-6xl px-4 rounded-xl py-4 divRef mt-10 md:mt-0'>
