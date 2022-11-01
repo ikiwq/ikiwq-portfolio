@@ -1,7 +1,6 @@
 import React, { Suspense } from 'react'
-import { useState, useEffect, useRef} from 'react'
 
-import { useFrame, Canvas, useLoader, useThree} from '@react-three/fiber'
+import { useFrame, Canvas, useLoader} from '@react-three/fiber'
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import * as THREE from 'three'
 
@@ -18,7 +17,7 @@ const Scene = ({nightMode}) => {
     })
 
     return(
-        <Suspense fallback={<Html prepend center><div className={`text-4xl text-center ${nightMode ? "text-white" : "text-black"}`}>Loading...</div></Html>}>
+        <Suspense fallback={<div className={`text-4xl text-center ${nightMode ? "text-white" : "text-black"}`}>Loading...</div>}>
           <primitive object={gltf.scene}/>
         </Suspense>
     )
