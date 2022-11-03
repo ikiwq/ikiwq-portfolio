@@ -13,14 +13,14 @@
 }
 
 .start-right{
-    opacity: 0.1;
+
     transform: translateX(100%);
     transition: all;
     transition-duration: 1000ms;
 }
 
 .end-right{
-    opacity: 100%;
+
     transform: translateX(0%);
     transition: all;
     transition-duration: 1000ms;
