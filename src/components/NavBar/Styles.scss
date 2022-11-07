@@ -44,8 +44,15 @@
     transition-duration: 500ms;
 }
 
+.navbar-link-top{
+    transform: translateY(-80%);
+    color: red;
+    transition: all;
+    transition-duration: 500ms;
+}
+
 .navbar-link-active{
-    transform: scale(100%);
+    transform: scale(100%) translateY(0%);
     color: red;
     transition: all;
     transition-duration: 500ms;
@@ -68,6 +75,5 @@
 }
 
 .mobile-menu{
-    animation-name: mobile-menuAnim;
-    animation-duration: 500ms;
+    animation: mobile-menuAnim 500ms;
 }

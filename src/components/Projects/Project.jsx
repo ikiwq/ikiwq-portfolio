@@ -23,8 +23,6 @@ const Project = ({right, nightMode, project}) => {
     entries.forEach(entry=>{
       if(entry.isIntersecting){
         entry.target.classList.add("end-left");
-      }else{
-        entry.target.classList.remove("end-left");
       }
     })
   })
@@ -33,8 +31,6 @@ const Project = ({right, nightMode, project}) => {
     entries.forEach(entry=>{
       if(entry.isIntersecting){
         entry.target.classList.add("end-right");
-      }else{
-        entry.target.classList.remove("end-right");
       }
     })
   })
@@ -54,7 +50,9 @@ const Project = ({right, nightMode, project}) => {
     <div className="">
       <div className={`hidden ${right ? "justify-end" : "justify-start" } "items-end relative md:flex`}>
         <div className='img-container relative w-4/6 hover:scale-110 hover:cursor-pointer transition-all duration-300' onClick={()=>{openLink()}}>
-            <img src={project?.postImage?.url} className={`block w-full h-auto ${right ? "left-0 start-right": "right-0 start-left"} img-class`}/>
+            <div className='overflow-hidden max-w-5xl max-h-96'>
+              <img src={project?.postImage?.url} className={`block w-full h-auto ${right ? "left-0 start-right": "right-0 start-left"} img-class`}/>
+            </div>
             <div className={`absolute bottom-0 left-0 right-0 overflow-hidden h-full img-cover ${right ? "start-right": "start-left"}`}/>
         </div>
         <div className={`z-10 col-span-3 flex flex-col absolute ${ right ? "left-0 start-left" : "right-0 start-right"} md:top-0 xl:top-10 md:gap-4`}>

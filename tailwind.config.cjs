@@ -6,6 +6,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      transitionDuration:{
+        '400': '400ms',
+        '600': '600ms'
+      }
     },
     fontFamily: {
       handwrite: 'Satisfy',

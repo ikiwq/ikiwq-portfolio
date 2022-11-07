@@ -41,8 +41,6 @@ const Home = ({nightMode}) => {
         entries.forEach((entry)=>{
           if(entry.isIntersecting){
             entry.target.classList.add("social-icon")
-          }else{
-            entry.target.classList.remove("social-icon")
           }
         })
       })

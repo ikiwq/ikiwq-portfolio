@@ -46,6 +46,7 @@ const NavBar = ({nightMode, setNightMode}) => {
 
   useEffect(()=>{
     let links = document.getElementsByClassName('navbar-link');
+
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry=>{
           entry.target.classList.add('navbar-link-active');
@@ -57,6 +58,23 @@ const NavBar = ({nightMode, setNightMode}) => {
       observer.observe(links[i]);
     }
   });
+
+  useEffect(()=>{
+    let linksTop = document.getElementsByClassName('navbar-link-top');
+
+    const observerTop = new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        entry.target.classList.add('navbar-link-active');
+        entry.target.classList.remove('navbar-link-top');
+    })
+    })
+
+    for(let i=0;i<linksTop.length;i++){
+      console.log(i)
+      observerTop.observe(linksTop[i]);
+    }
+    
+  })
 
   const switchMenu = () => {
     if(menu){
@@ -92,12 +110,12 @@ const NavBar = ({nightMode, setNightMode}) => {
         <div className='text-red-600'>
             <p className='font-handwrite text-4xl'>Iki</p>
         </div>
-        <div className='hidden text-red-600 gap-4 justify-center items-center md:flex'>
-            <Link to='home' smooth duration={500}><p className='navbar-link-active'>Home</p></Link>
-            <Link to='about' smooth duration={500}><p className='navbar-link-active'>About</p></Link>
-            <Link to='skills' smooth duration={500}><p className='navbar-link-active'>Skills</p></Link>
-            <Link to='portfolio' smooth duration={500} onClick={()=>{setMenu(false)}}><p className='navbar-link-active'>Portfolio</p></Link>
-            <Link to='contact' smooth duration={500} onClick={()=>{setMenu(false)}}><p className='navbar-link-active'>Contact</p></Link>
+        <div className='hidden text-red-600 gap-4 justify-center items-center md:flex navbar-links-top'>
+            <Link to='home' smooth duration={500}><p className='navbar-link-top duration-200'>Home</p></Link>
+            <Link to='about' smooth duration={500}><p className='navbar-link-top duration-300'>About</p></Link>
+            <Link to='skills' smooth duration={500}><p className='navbar-link-top duration-400'>Skills</p></Link>
+            <Link to='portfolio' smooth duration={500} onClick={()=>{setMenu(false)}}><p className='navbar-link-top duration-500'>Portfolio</p></Link>
+            <Link to='contact' smooth duration={500} onClick={()=>{setMenu(false)}}><p className='navbar-link-top duration-600'>Contact</p></Link>
         </div>
           <div className='flex text-red-600 items-center justify-center gap-2 text-xl'>
             <div className='hover:cursor-pointer z-50' onClick={()=>{switchTheme()}}>
